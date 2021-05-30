@@ -1,14 +1,19 @@
 import time
 from base import getListInput
+import random
+
 
 def quickSort(list):
     if (len(list) > 1):
-        base = list[0] # Take first elemtn of the list as base value
+        base = list[0]  # Take first elemtn of the list as base value
 
-        less = [i for i in list[1:] if i < base]
-        greater = [i for i in list[1:] if i > base]
+        base = random.choice(list)
 
-        return quickSort(less) + [base] + quickSort(greater)
+        less = [i for i in list if i < base]
+        greater = [i for i in list if i > base]
+        equal = [i for i in list if i == base]
+
+        return self.quickSort(less) + equal + self.quickSort(greater)
     else:
         return list
 
