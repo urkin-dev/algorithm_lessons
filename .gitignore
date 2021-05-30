@@ -2,6 +2,6 @@ __pycache__/
 inputs/
 *.py[cod]
 .idea
-input.*
+input.txt
 output.txt
 output.xlsx

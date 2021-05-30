@@ -13,11 +13,11 @@ def mergeSort(list):
         i = j = k = 0 # i - index of the left list, j - index of the right list, k - index of the list
 
         while (i < len(left) and j < len(right)):
-            if (left[i] < right[i]):
+            if (left[i] < right[j]):
                 list[k] = left[i] # List is the left part from "up call of function"
                 i += 1
             else:
-                list[k] = right[i]
+                list[k] = right[j]
                 j += 1
             
             k += 1
