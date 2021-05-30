@@ -11,7 +11,7 @@ else:
 list = set(getListInput(count)) #Remove repeat values
 list = sorted(list)
 
-element = 54 #Element you need to find
+ELEMENT = 54 #Element you need to find
 
 def binarySearch(list, item):
     low = 0
@@ -36,5 +36,5 @@ start = time.time()
 result = binarySearch(list, element)
 end = time.time()
 
-print('Index of element {} in unique array is: {}'.format(element, result))
+print('Index of element {} in unique array is: {}'.format(ELEMENT, result))
 print(end - start)
