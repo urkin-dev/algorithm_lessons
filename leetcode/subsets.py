@@ -1,11 +1,13 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        arr = [[]]
-
-        for i in range(len(nums)):
-            for j in range(len(arr)):
-                t = arr[j].copy()
-                t.append(nums[i])
-                arr.append(t)
+        arr = []
+        self.possibleSubs(arr, [], 0, nums)
 
         return arr
+
+    def possibleSubs(self, arr, path, idx, nums):
+        arr.append(path)
+
+        if len(path) == len(nums): return
+        for i in range(idx, len(nums)):
+            self.possibleSubs(arr, path + [nums[i]], i + 1, nums)
